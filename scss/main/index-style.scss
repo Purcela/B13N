@@ -1,0 +1,133 @@
+body {
+    @extend %body;
+    padding-top: 180px;
+    header {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding: 5px 10px 5px 0;
+        background-color:#dddde1;
+        position: fixed;
+        top: 0;
+        z-index: 2;                    
+        .logo-box {
+            width: 170px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media ( max-width: 640px ) {
+                display: none;
+            }
+            .logo-img {
+                width: 50px;
+                height: 50px;
+            }
+        }      
+        .flag-box{
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url(../../img/georgia.png);
+            max-width: 100%;
+            max-height: 100%;            
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            .header-h1 {
+                h1 {
+                    font-family: $h-reg;
+                    font-size: 50px;
+                    font-weight: bolder;
+                    color: #434141;
+                }
+            }
+            .header-h5 {
+                font-family: $L-reg;
+                font-size: 30px;
+            }
+        }            
+        .language-box,
+        .language-box1 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            a {
+                .language-flag {
+                    max-width: 20px;
+                    max-height: 20px;
+                    margin-top: 10px
+                }
+            }
+        }             
+        .language-box1 {
+            display: none;
+            @media (max-width: 640px) {
+                display: block;
+            }
+        }         
+    }
+    .body-box  {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        .your-idea {
+            font-family: $hp-reg;
+            font-size: 35px;
+            @media (max-width: 805px) {
+                font-size: 25px;
+            }
+            @media (max-width: 480px) {
+                font-size: 16px;
+            }
+        }
+        .all-products {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+            a {
+                width: 300px;
+                height: 70%;
+                display: flex;
+                .create,
+                .products {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding: 10px;
+                    background-color: lightgray;
+                    border-radius: 10%;
+                    .idea-p {
+                        font-family: $hp-reg;
+                    }
+                    .idea-painting {
+                        width: 100%;
+                        height: 80%;
+                        background-image: url(../../img/create-img.gif);
+                        background-size:contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+                .products {
+                    background-color: green;
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,17 @@
+
+
+@mixin d-flex($display, $justyfy, $align-item,) {
+        display: $display;
+        justify-content: $justyfy;
+        align-items: $align-item;
+}
+
+@mixin pos-abs($position,$top, $left, $x, $y) {
+    position: $position;
+    top: $top;   
+    left: $left;
+    transform:translate($x,$y);
+}
+
+
+
