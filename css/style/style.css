@@ -96,12 +96,9 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
-body {
-  padding-top: 180px;
-}
 body header {
   width: 100%;
   height: 180px;
@@ -153,17 +150,28 @@ body header .flag-box .header-h5 {
   font-family: "Lobster";
   font-size: 30px;
 }
+@media (max-width: 480px) {
+  body header .flag-box .header-h5 {
+    font-size: 25px;
+  }
+}
 body header .language-box,
 body header .language-box1 {
+  width: 30px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
-body header .language-box a .language-flag,
-body header .language-box1 a .language-flag {
-  max-width: 20px;
-  max-height: 20px;
+body header .language-box .lang-links,
+body header .language-box1 .lang-links {
+  display: flex;
+}
+body header .language-box .lang-links .lang-flag,
+body header .language-box1 .lang-links .lang-flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   margin-top: 10px;
 }
 body header .language-box1 {
@@ -179,60 +187,96 @@ body .body-box {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 220px 20px 20px 20px;
+}
+@media (max-width: 640px) {
+  body .body-box {
+    height: 1300px;
+  }
 }
 body .body-box .your-idea {
+  height: 50px;
   font-family: "Henny Penny";
   font-size: 35px;
 }
-@media (max-width: 805px) {
+@media (max-width: 680px) {
   body .body-box .your-idea {
     font-size: 25px;
   }
 }
 @media (max-width: 480px) {
   body .body-box .your-idea {
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
   }
 }
 body .body-box .all-products {
-  width: 100%;
-  height: 80%;
+  width: 90%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
+@media (max-width: 640px) {
+  body .body-box .all-products {
+    height: 820px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 body .body-box .all-products a {
   width: 300px;
-  height: 70%;
   display: flex;
+}
+@media (max-width: 750px) {
+  body .body-box .all-products a {
+    width: 250px;
+  }
 }
 body .body-box .all-products a .create,
 body .body-box .all-products a .products {
   width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  background-color: lightgray;
   border-radius: 10%;
 }
 body .body-box .all-products a .create .idea-p,
 body .body-box .all-products a .products .idea-p {
   font-family: "Henny Penny";
+  font-size: 20px;
+  line-height: 30px;
 }
 body .body-box .all-products a .create .idea-painting,
 body .body-box .all-products a .products .idea-painting {
   width: 100%;
-  height: 80%;
+  height: 250px;
   background-image: url(../../img/create-img.gif);
   background-size: contain;
   background-repeat: no-repeat;
 }
 body .body-box .all-products a .products {
   background-color: green;
+}
+body .body-box .about-box {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+body .body-box .about-box .fa-share-nodes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: #5858f7;
+  border-radius: 50%;
 }

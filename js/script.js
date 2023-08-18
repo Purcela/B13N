@@ -1,10 +1,13 @@
 
-// -------------------------  burger box  ---------------------------------
+// -------------------------  share  ---------------------------------
 
-$("#burger-menu").on("click", function(){
-    $("#menu1").toggleClass("open-menu");
-  })
-
+document.addEventListener('DOMContentLoaded', function() {
+    var shareButton = document.querySelector('.share-button');
+    
+    shareButton.addEventListener('click', function() {
+        this.classList.add('active');
+    });
+});
 
 
 // -----------------------------  sort by ----------------------------
