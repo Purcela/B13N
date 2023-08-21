@@ -225,17 +225,19 @@ body .body-box .all-products {
     justify-content: space-between;
   }
 }
-body .body-box .all-products a {
+body .body-box .all-products .product-type {
   width: 300px;
   display: flex;
+  border-radius: 10%;
+  border: 3px dotted #4b4bf5;
 }
 @media (max-width: 750px) {
-  body .body-box .all-products a {
+  body .body-box .all-products .product-type {
     width: 250px;
   }
 }
-body .body-box .all-products a .create,
-body .body-box .all-products a .products {
+body .body-box .all-products .product-type .create,
+body .body-box .all-products .product-type .products {
   width: 100%;
   height: 400px;
   display: flex;
@@ -245,38 +247,108 @@ body .body-box .all-products a .products {
   padding: 10px;
   border-radius: 10%;
 }
-body .body-box .all-products a .create .idea-p,
-body .body-box .all-products a .products .idea-p {
+body .body-box .all-products .product-type .create .idea-p,
+body .body-box .all-products .product-type .products .idea-p {
   font-family: "Henny Penny";
   font-size: 20px;
   line-height: 30px;
 }
-body .body-box .all-products a .create .idea-painting,
-body .body-box .all-products a .products .idea-painting {
+body .body-box .all-products .product-type .create .idea-painting,
+body .body-box .all-products .product-type .products .idea-painting {
   width: 100%;
   height: 250px;
   background-image: url(../../img/create-img.gif);
   background-size: contain;
   background-repeat: no-repeat;
 }
-body .body-box .all-products a .products {
+body .body-box .all-products .product-type .products {
   background-color: green;
 }
-body .body-box .about-box {
+body .body-box .footer-box {
   width: 80%;
-  height: 100px;
+  height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: red;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: gray;
 }
-body .body-box .about-box .fa-share-nodes {
+body .body-box .footer-box .container {
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+body .body-box .footer-box .container .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
+body .body-box .footer-box .container .share .label1 {
+  width: 56px;
+  height: 16px;
+}
+body .body-box .footer-box .container .share .icon {
+  display: inline-block;
+  background: blue;
+  width: 60px;
+  height: 60px;
   color: white;
-  background-color: #5858f7;
+  margin-left: -3px;
+  margin-right: -3px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+body .body-box .footer-box .container .share .icon span {
+  padding-top: 22px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+body .body-box .footer-box .container .share .icon .insta-img {
+  width: 60px;
+  height: 60px;
+}
+body .body-box .footer-box .container .share .first {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+body .body-box .footer-box .container .share .last {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+body .body-box .footer-box .container .share .label {
+  position: relative;
+  left: -140px;
+  color: white;
+  font-weight: bold;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+body .body-box .footer-box .container .share:hover .icon {
   border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+body .body-box .footer-box .container .share:hover .icon span {
+  opacity: 1;
+}
+body .body-box .footer-box .container .share:hover .label {
+  opacity: 0;
+}
+body .body-box .footer-box .container .share:hover .fb {
+  background: #3b5998;
+}
+body .body-box .footer-box .container .share:hover .twtr {
+  background: #55acee;
+}
+body .body-box .footer-box .container .share:hover .insta-img {
+  width: 60px;
+  height: 60px;
+}
+body .body-box .footer-box .container .share:hover .gplus {
+  background: #dd4b39;
 }

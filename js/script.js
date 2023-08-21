@@ -1,11 +1,12 @@
 
 // -------------------------  share  ---------------------------------
 
-document.addEventListener('DOMContentLoaded', function() {
-    var shareButton = document.querySelector('.share-button');
-    
-    shareButton.addEventListener('click', function() {
-        this.classList.add('active');
+document.addEventListener("DOMContentLoaded", function () {
+    const shareButton = document.querySelector(".share-button");
+    const shareIcons = document.querySelector(".share-icons");
+
+    shareButton.addEventListener("click", () => {
+        shareIcons.classList.toggle("show-icons");
     });
 });
 
