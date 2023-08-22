@@ -1,13 +1,44 @@
 
 // -------------------------  share  ---------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
-    const shareButton = document.querySelector(".share-button");
-    const shareIcons = document.querySelector(".share-icons");
+$(document).ready(function() {
+    var open = false;
+    $('.circle-bg').on('click', function() {
+        if (!open) {
+            $(this).animate({
+                height: '+=10px',
+                width: '+=10px'
+            }, 300);
 
-    shareButton.addEventListener("click", () => {
-        shareIcons.classList.toggle("show-icons");
+            $('.outer-icons').css('opacity', 1); // Show the outer-icons
+            $('.icon').fadeOut();
+            $(this).html("<i class='icon fa fa-times' style='display: none'></i>");
+            $('.icon').fadeIn();
+
+            open = true;
+        } else {
+            $(this).animate({
+                height: '-=10px',
+                width: '-=10px'
+            }, 200);
+
+            $('.outer-icons').css('opacity', 0); // Hide the outer-icons
+            $('.icon').fadeOut();
+            $(this).html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
+            $('.icon').fadeIn();
+
+            open = false;
+        }
     });
+});
+
+// -----------------------------  hide footer ----------------------------
+
+const footerBox = document.querySelector('.footer-box');
+const toggleButton = document.getElementById('toggleFooter');
+
+toggleButton.addEventListener('click', () => {
+    footerBox.classList.toggle('hidden');
 });
 
 
