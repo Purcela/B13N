@@ -1,9 +1,36 @@
+// -------------------------  soc media  ---------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const socBox = document.querySelector('.soc-box');
+    const mediaIcons = document.querySelector('.media-icons');
+    let mediaIconsVisible = false;
+
+    socBox.addEventListener('click', function(event) {
+        event.stopPropagation();
+
+        if (mediaIconsVisible) {
+            mediaIcons.style.display = 'none';
+        } else {
+            mediaIcons.style.display = 'block';
+        }
+
+        mediaIconsVisible = !mediaIconsVisible;
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!mediaIcons.contains(event.target)) {
+            mediaIcons.style.display = 'none';
+            mediaIconsVisible = false;
+        }
+    });
+});
 
 // -------------------------  share  ---------------------------------
 
 $(document).ready(function() {
     var open = false;
     $('.circle-bg').on('click', function() {
+        event.stopPropagation(); // hide after clicking outside <div> 
         if (!open) {
             $(this).animate({
                 height: '+=10px',
@@ -30,7 +57,26 @@ $(document).ready(function() {
             open = false;
         }
     });
+ // ---------- hide after clicking outside <div> 
+    $(document).on('click', function(event) {
+        if (open && !$(event.target).closest('.outer-icons').length) {
+            $('.circle-bg').animate({
+                height: '-=10px',
+                width: '-=10px'
+            }, 200);
+
+            $('.outer-icons').css('opacity', 0); // Hide the outer-icons
+            $('.icon').fadeOut();
+            $('.circle-bg').html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
+            $('.icon').fadeIn();
+
+            open = false;
+        }
+    });
+//-----------------------------
 });
+
+
 
 // -----------------------------  hide footer ----------------------------
 
@@ -117,16 +163,7 @@ nextBtn.addEventListener('click', () => {
     }
 });
 
-//--------------------------- share buttons --------------------------------
-function shareOnFacebook() {
-    var url = "https://purcela.github.io/B13/";
-    var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
-    window.open(facebookUrl, "_blank", "width=600,height=400");
-}
 
-// Attach click event to the Facebook share button
-var facebookShareButton = document.querySelector(".facebook_share_btn");
-facebookShareButton.addEventListener("click", shareOnFacebook);
 
 // ------------------------------ testing -------------------------------------
 

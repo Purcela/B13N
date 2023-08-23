@@ -157,7 +157,28 @@ body {
             padding: 10px;
             border-radius: 25px;            
             background-color: #d9d6d6;
-            .soc-media,
+            .soc-box {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50px;
+                background-color: #1877F2;
+                cursor: pointer; /* Add cursor pointer to indicate clickability */
+            
+                .media-icons {
+                    display: none; /* Initially hide the media-icons */
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: red;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+                }
+            }
             .about-us {
                 width: 50px;
                 height: 50px;
@@ -207,31 +228,31 @@ body {
                     background-color: green;
                     border-radius: 50px;
                     transform: translate(-50%, -50%);
-                    i {
-                        color: white;
-                        border-radius: 50%;
-                        font-size: 20px;
-                        line-height: 40px;
-                        height: 40px;
-                        width: 40px;
-                        text-align: center;
-                        vertical-align: middle;
-                    }
-                    .one {
-                        background-color: #55acee;
-                    }
+                    // i {
+                    //     color: white;
+                    //     border-radius: 50%;
+                    //     font-size: 20px;
+                    //     line-height: 40px;
+                    //     height: 40px;
+                    //     width: 40px;
+                    //     text-align: center;
+                    //     vertical-align: middle;
+                    // }
+                    // .one {
+                    //     background-color: #55acee;
+                    // }
                       
-                    .two {
-                        background-color: #3b5998;
-                    }
+                    // .two {
+                    //     background-color: #3b5998;
+                    // }
                     
-                    .three {
-                        background-color: #dc4e41;
-                    }
+                    // .three {
+                    //     background-color: #dc4e41;
+                    // }
                     
-                    .four {
-                        background-color: #0077b5;
-                    }
+                    // .four {
+                    //     background-color: #0077b5;
+                    // }
                 }
             }
         }
