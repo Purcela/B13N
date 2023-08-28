@@ -78,15 +78,16 @@ body {
         }         
     }
     .body-box  {
-        width: 100%;
+        width: 99%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 220px 20px 130px 20px;
+        padding: 200px 20px 50px 20px;
         @media (max-width: 640px) {
-            height: 1350px;
+            height: 1250px;
+            justify-content: space-evenly;
         }
         .your-idea {            
             height: 50px;
@@ -147,51 +148,100 @@ body {
             }
         }
         .footer-box {
-            width: 300px;
-            height: 80px;
+            width: 250px;
+            height: 35px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: fixed;
             bottom: 20px;
             padding: 10px;
-            border-radius: 25px;            
+            border-radius: 25px;
             background-color: #d9d6d6;
             .soc-box {
-                width: 50px;
-                height: 50px;
+                width: 30px;
+                height: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 50px;
+                border-radius: 30px;
                 background-color: #1877F2;
-                cursor: pointer; /* Add cursor pointer to indicate clickability */
-            
+                cursor: pointer;
                 .media-icons {
-                    display: none; /* Initially hide the media-icons */
+                    display: none;
+                    width: 35px;
+                    height: 120px;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
                     position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: red;
-                    padding: 20px;
-                    border-radius: 10px;
-                    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+                    bottom: 10%;
+                    background-color: #d9d6d6;
+                    border-radius: 30px;
+                    .fa-brands {
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .insta-back {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        background-image: url(../../img/insta-back.jfif);            
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        .fa-instagram {
+                            font-size: 24px;
+                        }
+                    }
                 }
-            }
+            }  
+            .soc-title {
+                width: 60px;
+                height: 15px;
+                position: fixed;
+                left: 50%;
+                bottom: 55px;
+                font-family: $hp-reg;
+                font-weight: bolder;
+                display: none;
+                transform: translate(-50%, -50%);
+            }             
+            .soc-box:hover + p {
+                display: block;
+              }      
             .about-us {
-                width: 50px;
-                height: 50px;
+                width: 30px;
+                height: 30px;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                border-radius: 50px;
-                background-color:#1877F2;
-                
+                border-radius: 30px;
+                background-color:#1877F2;                
             }
+            .about-title {
+                width: 70px;
+                height: 15px;
+                position: fixed;
+                left: 50%;
+                bottom: 55px;
+                font-family: $hp-reg;
+                font-weight: bolder;
+                display: none;
+                transform: translate(-50%, -50%);
+            }             
+            .about-us:hover + p {
+                display: block;
+              }   
             .container {
-                width: 60px;
-                height: 60px;
+                width: 30px;
+                height: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -202,64 +252,62 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 50px;
-                    width: 50px;
+                    height: 30px;
+                    width: 30px;
                     position: absolute;
                     vertical-align: middle;
                     .icon {
                         color: white;
                         display: table-cell;
-                        font-size: 20px;
+                        font-size: 15px;
                         text-align: center;
                         vertical-align: middle;                        
                     }
                 }
                   .outer-icons {
-                    width: 60px;
-                    height: 220px;
+                    height: 250px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
                     position: fixed;
-                    left: 50%;
-                    bottom: 25%;
+                    bottom: 10%;
                     opacity: 0;
-                    background-color: green;
-                    border-radius: 50px;
-                    transform: translate(-50%, -50%);
-                    // i {
-                    //     color: white;
-                    //     border-radius: 50%;
-                    //     font-size: 20px;
-                    //     line-height: 40px;
-                    //     height: 40px;
-                    //     width: 40px;
-                    //     text-align: center;
-                    //     vertical-align: middle;
-                    // }
-                    // .one {
-                    //     background-color: #55acee;
-                    // }
-                      
-                    // .two {
-                    //     background-color: #3b5998;
-                    // }
-                    
-                    // .three {
-                    //     background-color: #dc4e41;
-                    // }
-                    
-                    // .four {
-                    //     background-color: #0077b5;
-                    // }
+                    background-color: #d9d6d6;
+                    border-radius: 30px;
+                    padding-top: 8px;
+                    .share-list {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        a {
+                            span {                                
+                                border-radius: 30px;
+                            }
+                        }
+                    }
                 }
             }
+            .share-title {
+                height: 15px;
+                position: fixed;
+                left: 50%;
+                bottom: 55px;
+                font-family: $hp-reg;
+                font-weight: bolder;
+                display: none;
+                transform: translate(-50%, -50%);
+            }             
+            .container:hover + p {
+                display: block;
+              }  
         }
         .footer-hide {
             position: fixed;
             bottom: 5px;
-            border-radius: 50px;
+            border-radius: 30px;
+            font-size: 10px;
         }       
         .hidden {
             display: none;

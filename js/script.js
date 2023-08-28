@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mediaIconsVisible) {
             mediaIcons.style.display = 'none';
         } else {
-            mediaIcons.style.display = 'block';
+            mediaIcons.style.display = 'flex';
         }
 
         mediaIconsVisible = !mediaIconsVisible;

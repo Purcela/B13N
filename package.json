@@ -6,11 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "{G}",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.65.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://purcela.github.io/B13N/"
   }
 }

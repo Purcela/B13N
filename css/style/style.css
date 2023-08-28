@@ -188,17 +188,18 @@ body header .language-box1 {
   }
 }
 body .body-box {
-  width: 100%;
+  width: 99%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 220px 20px 130px 20px;
+  padding: 200px 20px 50px 20px;
 }
 @media (max-width: 640px) {
   body .body-box {
-    height: 1350px;
+    height: 1250px;
+    justify-content: space-evenly;
   }
 }
 body .body-box .your-idea {
@@ -270,8 +271,8 @@ body .body-box .all-products .product-type .products {
   background-color: green;
 }
 body .body-box .footer-box {
-  width: 300px;
-  height: 80px;
+  width: 250px;
+  height: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -282,38 +283,89 @@ body .body-box .footer-box {
   background-color: #d9d6d6;
 }
 body .body-box .footer-box .soc-box {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 30px;
   background-color: #1877F2;
-  cursor: pointer; /* Add cursor pointer to indicate clickability */
+  cursor: pointer;
 }
 body .body-box .footer-box .soc-box .media-icons {
-  display: none; /* Initially hide the media-icons */
+  display: none;
+  width: 35px;
+  height: 120px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: red;
-  padding: 20px;
+  bottom: 10%;
+  background-color: #d9d6d6;
+  border-radius: 30px;
+}
+body .body-box .footer-box .soc-box .media-icons .fa-brands {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .body-box .footer-box .soc-box .media-icons .insta-back {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background-image: url(../../img/insta-back.jfif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+body .body-box .footer-box .soc-box .media-icons .insta-back .fa-instagram {
+  font-size: 24px;
+}
+body .body-box .footer-box .soc-title {
+  width: 60px;
+  height: 15px;
+  position: fixed;
+  left: 50%;
+  bottom: 55px;
+  font-family: "Henny Penny";
+  font-weight: bolder;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+body .body-box .footer-box .soc-box:hover + p {
+  display: block;
 }
 body .body-box .footer-box .about-us {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 30px;
   background-color: #1877F2;
 }
+body .body-box .footer-box .about-title {
+  width: 70px;
+  height: 15px;
+  position: fixed;
+  left: 50%;
+  bottom: 55px;
+  font-family: "Henny Penny";
+  font-weight: bolder;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+body .body-box .footer-box .about-us:hover + p {
+  display: block;
+}
 body .body-box .footer-box .container {
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,37 +377,58 @@ body .body-box .footer-box .container .circle-bg {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   vertical-align: middle;
 }
 body .body-box .footer-box .container .circle-bg .icon {
   color: white;
   display: table-cell;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   vertical-align: middle;
 }
 body .body-box .footer-box .container .outer-icons {
-  width: 60px;
-  height: 220px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  left: 50%;
-  bottom: 25%;
+  bottom: 10%;
   opacity: 0;
-  background-color: green;
-  border-radius: 50px;
+  background-color: #d9d6d6;
+  border-radius: 30px;
+  padding-top: 8px;
+}
+body .body-box .footer-box .container .outer-icons .share-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .body-box .footer-box .container .outer-icons .share-list a span {
+  border-radius: 30px;
+}
+body .body-box .footer-box .share-title {
+  height: 15px;
+  position: fixed;
+  left: 50%;
+  bottom: 55px;
+  font-family: "Henny Penny";
+  font-weight: bolder;
+  display: none;
   transform: translate(-50%, -50%);
+}
+body .body-box .footer-box .container:hover + p {
+  display: block;
 }
 body .body-box .footer-hide {
   position: fixed;
   bottom: 5px;
-  border-radius: 50px;
+  border-radius: 30px;
+  font-size: 10px;
 }
 body .body-box .hidden {
   display: none;
