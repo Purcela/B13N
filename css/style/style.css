@@ -189,7 +189,7 @@ body header .language-box1 {
 }
 body .body-box {
   width: 99%;
-  height: 100%;
+  height: 99%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -340,25 +340,8 @@ body .body-box .footer-box .soc-title {
 body .body-box .footer-box .soc-box:hover + p {
   display: block;
 }
-body .body-box .footer-box .about-us {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 30px;
-  background-color: #1877F2;
-}
-body .body-box .footer-box .about-title {
-  width: 70px;
-  height: 15px;
-  position: fixed;
-  left: 50%;
-  bottom: 55px;
-  font-family: "Henny Penny";
-  font-weight: bolder;
-  display: none;
-  transform: translate(-50%, -50%);
+body .body-box .footer-box .about-us .about-title {
+  font-family: "Lobster";
 }
 body .body-box .footer-box .about-us:hover + p {
   display: block;
@@ -432,4 +415,27 @@ body .body-box .footer-hide {
 }
 body .body-box .hidden {
   display: none;
+}
+
+body .about-body-box .about-text {
+  width: 60%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .about-body-box .about-text .about-p {
+  font-family: "Lobster";
+  line-height: 20px;
+  text-indent: 15px;
+}
+body .about-body-box .about-text .about-p span {
+  font-weight: bold;
+}
+body .about-body-box .about-info {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  background-color: red;
 }
