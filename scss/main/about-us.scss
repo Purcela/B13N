@@ -1,12 +1,14 @@
 body {
     .about-body-box {
         .about-text{
-            width: 60%;
+            width: 65%;
+            min-width: 285px;
             height: 30%;
+            max-height: 240px;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            align-items: center;
+            align-items: flex-start;
             .about-p {
                 font-family: $L-reg;
                 line-height: 20px;
@@ -17,10 +19,11 @@ body {
             }
         }
         .about-info {
-            width: 60%;
+            width: 65%;
+            min-width: 285px;
             height: 60%;
             display: flex;
-            background-color: red;
+            background-color: grey;
         }
     }
 }

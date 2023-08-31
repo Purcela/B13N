@@ -29,43 +29,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function() {
     var open = false;
-    $('.circle-bg').on('click', function() {
-        event.stopPropagation(); // hide after clicking outside <div> 
+
+    // Click event on the container
+    $('.container').on('click', function(event) {
+        event.stopPropagation();
+
         if (!open) {
-            $(this).animate({
+            $('.circle-bg').animate({
                 height: '+=10px',
                 width: '+=10px'
             }, 300);
 
-            $('.outer-icons').css('opacity', 1); // Show the outer-icons
+            $('.outer-icons').css('display', 'flex'); // Show the outer-icons
             $('.icon').fadeOut();
-            $(this).html("<i class='icon fa fa-times' style='display: none'></i>");
+            $('.circle-bg').html("<i class='icon fa fa-times' style='display: none'></i>");
             $('.icon').fadeIn();
 
             open = true;
         } else {
-            $(this).animate({
-                height: '-=10px',
-                width: '-=10px'
-            }, 200);
-
-            $('.outer-icons').css('opacity', 0); // Hide the outer-icons
-            $('.icon').fadeOut();
-            $(this).html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
-            $('.icon').fadeIn();
-
-            open = false;
-        }
-    });
- // ---------- hide after clicking outside <div> 
-    $(document).on('click', function(event) {
-        if (open && !$(event.target).closest('.outer-icons').length) {
             $('.circle-bg').animate({
                 height: '-=10px',
                 width: '-=10px'
             }, 200);
 
-            $('.outer-icons').css('opacity', 0); // Hide the outer-icons
+            $('.outer-icons').css('display', 'none'); // Hide the outer-icons
             $('.icon').fadeOut();
             $('.circle-bg').html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
             $('.icon').fadeIn();
@@ -73,8 +60,25 @@ $(document).ready(function() {
             open = false;
         }
     });
-//-----------------------------
+
+    // Click event on the document to close when clicking outside the container
+    $(document).on('click', function(event) {
+        if (open && !$(event.target).closest('.container').length) {
+            $('.circle-bg').animate({
+                height: '-=10px',
+                width: '-=10px'
+            }, 200);
+
+            $('.outer-icons').css('display', 'none'); // Hide the outer-icons
+            $('.icon').fadeOut();
+            $('.circle-bg').html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
+            $('.icon').fadeIn();
+
+            open = false;
+        }
+    });
 });
+
 
 
 

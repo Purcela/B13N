@@ -192,7 +192,7 @@ body .body-box {
   height: 99%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 200px 20px 50px 20px;
 }
@@ -200,22 +200,6 @@ body .body-box {
   body .body-box {
     height: 1250px;
     justify-content: space-evenly;
-  }
-}
-body .body-box .your-idea {
-  height: 50px;
-  font-family: "Henny Penny";
-  font-size: 35px;
-}
-@media (max-width: 680px) {
-  body .body-box .your-idea {
-    font-size: 25px;
-  }
-}
-@media (max-width: 480px) {
-  body .body-box .your-idea {
-    font-size: 15px;
-    font-weight: bold;
   }
 }
 body .body-box .all-products {
@@ -248,7 +232,7 @@ body .body-box .all-products .product-type .products {
   height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   border-radius: 10%;
@@ -256,8 +240,14 @@ body .body-box .all-products .product-type .products {
 body .body-box .all-products .product-type .create .idea-p,
 body .body-box .all-products .product-type .products .idea-p {
   font-family: "Henny Penny";
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 30px;
+  line-height: 40px;
+}
+@media (max-width: 750px) {
+  body .body-box .all-products .product-type .create .idea-p,
+  body .body-box .all-products .product-type .products .idea-p {
+    font-size: 25px;
+  }
 }
 body .body-box .all-products .product-type .create .idea-painting,
 body .body-box .all-products .product-type .products .idea-painting {
@@ -342,6 +332,7 @@ body .body-box .footer-box .soc-box:hover + p {
 }
 body .body-box .footer-box .about-us .about-title {
   font-family: "Lobster";
+  margin-bottom: 10px;
 }
 body .body-box .footer-box .about-us:hover + p {
   display: block;
@@ -352,6 +343,7 @@ body .body-box .footer-box .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 body .body-box .footer-box .container .circle-bg {
   background-color: #1877F2;
@@ -374,13 +366,12 @@ body .body-box .footer-box .container .circle-bg .icon {
 }
 body .body-box .footer-box .container .outer-icons {
   height: 250px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
   bottom: 10%;
-  opacity: 0;
   background-color: #d9d6d6;
   border-radius: 30px;
   padding-top: 8px;
@@ -418,12 +409,14 @@ body .body-box .hidden {
 }
 
 body .about-body-box .about-text {
-  width: 60%;
+  width: 65%;
+  min-width: 285px;
   height: 30%;
+  max-height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
 body .about-body-box .about-text .about-p {
   font-family: "Lobster";
@@ -434,8 +427,9 @@ body .about-body-box .about-text .about-p span {
   font-weight: bold;
 }
 body .about-body-box .about-info {
-  width: 60%;
+  width: 65%;
+  min-width: 285px;
   height: 60%;
   display: flex;
-  background-color: red;
+  background-color: grey;
 }

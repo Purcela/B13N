@@ -82,24 +82,12 @@ body {
         height: 99%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         padding: 200px 20px 50px 20px;
         @media (max-width: 640px) {
             height: 1250px;
             justify-content: space-evenly;
-        }
-        .your-idea {            
-            height: 50px;
-            font-family: $hp-reg;
-            font-size: 35px;
-            @media (max-width: 680px) {
-                font-size: 25px;
-            }
-            @media (max-width: 480px) {
-                font-size: 15px;
-            font-weight: bold;
-            }
         }
         .all-products {
         width: 90%;
@@ -125,14 +113,17 @@ body {
                     height: 400px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     align-items: center;
                     padding: 10px;
                     border-radius: 10%;
                     .idea-p {
                         font-family: $hp-reg;
-                        font-size: 20px;
-                        line-height: 30px;
+                        font-size: 30px;
+                        line-height: 40px;
+                        @media (max-width:750px) {
+                            font-size: 25px;
+                        }
                     }
                     .idea-painting {
                         width: 100%;
@@ -219,6 +210,7 @@ body {
             .about-us {
                 .about-title {
                     font-family: $L-reg;
+                    margin-bottom: 10px;
                 } 
             }           
             .about-us:hover + p {
@@ -230,6 +222,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
                 .circle-bg {
                     background-color: 	#1877F2;
                     border-radius: 50%;
@@ -251,13 +244,12 @@ body {
                 }
                   .outer-icons {
                     height: 250px;
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
                     position: fixed;
                     bottom: 10%;
-                    opacity: 0;
                     background-color: #d9d6d6;
                     border-radius: 30px;
                     padding-top: 8px;
