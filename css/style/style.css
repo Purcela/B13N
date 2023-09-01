@@ -481,6 +481,6 @@ body .about-body-box .about-info-box .about-map {
     width: 95%;
   }
 }
-body .about-body-box .about-info-box .about-map frame {
+body .about-body-box .about-info-box .about-map iframe {
   border-radius: 10px;
 }
