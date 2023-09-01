@@ -242,6 +242,7 @@ body .body-box .all-products .product-type .products .idea-p {
   font-family: "Henny Penny";
   font-size: 30px;
   line-height: 40px;
+  text-align: center;
 }
 @media (max-width: 750px) {
   body .body-box .all-products .product-type .create .idea-p,
@@ -257,8 +258,13 @@ body .body-box .all-products .product-type .products .idea-painting {
   background-size: contain;
   background-repeat: no-repeat;
 }
-body .body-box .all-products .product-type .products {
-  background-color: green;
+body .body-box .all-products .product-type .create .product-painting,
+body .body-box .all-products .product-type .products .product-painting {
+  width: 100%;
+  height: 250px;
+  background-image: url(../../img/create-img.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 body .body-box .footer-box {
   width: 250px;
@@ -408,6 +414,14 @@ body .body-box .hidden {
   display: none;
 }
 
+body .about-body-box {
+  justify-content: space-around;
+}
+@media (max-width: 940px) {
+  body .about-body-box {
+    height: 1100px;
+  }
+}
 body .about-body-box .about-text {
   width: 65%;
   min-width: 285px;
@@ -426,10 +440,47 @@ body .about-body-box .about-text .about-p {
 body .about-body-box .about-text .about-p span {
   font-weight: bold;
 }
-body .about-body-box .about-info {
+body .about-body-box .about-info-box {
   width: 65%;
   min-width: 285px;
-  height: 60%;
+  height: 300px;
   display: flex;
-  background-color: grey;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 940px) {
+  body .about-body-box .about-info-box {
+    flex-direction: column;
+    height: 600px;
+  }
+}
+body .about-body-box .about-info-box .about-info {
+  width: 50%;
+  min-width: 285px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .about-body-box .about-info-box .about-info a {
+  font-family: "Lobster";
+  font-size: 16px;
+  color: black;
+}
+body .about-body-box .about-info-box .about-info a i {
+  margin-right: 15px;
+  font-size: 30px;
+}
+body .about-body-box .about-info-box .about-map {
+  width: 50%;
+  height: 250px;
+  min-width: 285px;
+}
+@media (max-width: 940px) {
+  body .about-body-box .about-info-box .about-map {
+    width: 95%;
+  }
+}
+body .about-body-box .about-info-box .about-map frame {
+  border-radius: 10px;
 }

@@ -121,6 +121,7 @@ body {
                         font-family: $hp-reg;
                         font-size: 30px;
                         line-height: 40px;
+                        text-align: center;
                         @media (max-width:750px) {
                             font-size: 25px;
                         }
@@ -132,9 +133,13 @@ body {
                         background-size:contain;
                         background-repeat: no-repeat;
                     }
-                }
-                .products {
-                    background-color: green;
+                    .product-painting { 
+                        width: 100%;
+                        height: 250px;                       
+                        background-image: url(../../img/create-img.gif);
+                        background-size:contain;
+                        background-repeat: no-repeat;
+                    }
                 }
             }
         }

@@ -1,5 +1,9 @@
 body {
     .about-body-box {
+        justify-content: space-around;
+        @media (max-width:940px) {
+            height: 1100px;
+        }
         .about-text{
             width: 65%;
             min-width: 285px;
@@ -18,12 +22,44 @@ body {
                 }
             }
         }
-        .about-info {
+        .about-info-box {
             width: 65%;
             min-width: 285px;
-            height: 60%;
+            height: 300px;
             display: flex;
-            background-color: grey;
+            justify-content: space-around;
+            align-items: center;
+            @media (max-width:940px) {
+                flex-direction: column;
+                height: 600px;
+            }
+            .about-info {
+                width: 50%;
+                min-width: 285px;
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                a {
+                    font-family: $L-reg;
+                    font-size: 16px;
+                    color: black;
+                    i {
+                        margin-right: 15px;
+                        font-size: 30px;
+                    }
+                }
+            }             
+            .about-map {
+                width: 50%;
+                height: 250px;
+                min-width: 285px;@media (max-width:940px) {
+                    width: 95%;
+                }
+                frame {
+                    border-radius: 10px;
+                }
+            }
         }
     }
 }
