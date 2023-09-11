@@ -1,3 +1,20 @@
+// -------------------------  burger-menu  ---------------------------------
+
+$(document).ready(function () {
+    $("#burger-menu").on("click", function (event) {
+        event.stopPropagation(); // Prevent the click event from propagating to the document body
+        $("#menu1").toggleClass("open-menu");
+    });
+
+    // Close menu when clicking outside of the menu box
+    $(document.body).on("click", function (event) {
+        if (!$(event.target).closest(".menu-box").length) {
+            // If the click target is not within .menu-box or .menu-ul1, close the menu
+            $("#menu1").removeClass("open-menu");
+        }
+    });
+});
+
 // -------------------------  soc media  ---------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {

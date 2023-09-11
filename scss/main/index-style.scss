@@ -154,7 +154,7 @@ body {
             bottom: 20px;
             padding: 10px;
             border-radius: 25px;
-            background-color: #d9d6d6;
+            background-color: #d9d6d6;             
             .soc-box {
                 width: 30px;
                 height: 30px;
@@ -167,7 +167,7 @@ body {
                 .media-icons {
                     display: none;
                     width: 35px;
-                    height: 120px;
+                    height: 150px;
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
@@ -212,7 +212,71 @@ body {
             }             
             .soc-box:hover + p {
                 display: block;
-              }      
+              }
+              .menu-box {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 30px;
+                background-color: #1877F2;
+                cursor: pointer;
+                .burger-icon {
+                    display: block; 
+                    color: black;
+                    font-size: 30px;
+                    cursor:pointer; 
+                }
+                .menu-ul1 { 
+                    display: none;
+                    li {
+                        font-family: $fo-reg;                    
+                        font-size: 16px;
+                        .active {
+                            font-weight: bold;
+                            color: darkgreen;
+                        }
+                        a {
+                        color: black;
+                        }
+                    }
+                    li:first-child {
+                        font-size: 18px;
+                    }
+                    li:last-child {
+                        margin-top: 15px;
+                    }
+                }
+                .menu-ul1.open-menu {
+                    width: 150px;
+                    height: 150px;            
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    border-radius: 10px;
+                    position: fixed;
+                    left: 50%;
+                    padding: 5px;
+                    transform: translate(-50%, -80%);
+                    background-color:#dddde1;                                 
+                }                
+            }
+            .menu-title {                
+                width: 60px;
+                height: 15px;
+                position: fixed;
+                left: 50%;
+                bottom: 55px;
+                font-family: $hp-reg;
+                font-weight: bolder;
+                display: none;
+                transform: translate(-50%, -50%);
+            }             
+            .menu-box:hover + p {
+                display: block;
+            }       
             .about-us {
                 .about-title {
                     font-family: $L-reg;
@@ -249,7 +313,7 @@ body {
                     }
                 }
                   .outer-icons {
-                    height: 250px;
+                    height: 150px;
                     display: none;
                     flex-direction: column;
                     justify-content: space-evenly;
@@ -264,9 +328,25 @@ body {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
+                        align-items: center;
                         a {
                             span {                                
                                 border-radius: 30px;
+                            }
+                        }
+                        .insta-back {
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                            background-image: url(../../img/insta-back.jfif);            
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: center;
+                            .fa-instagram {
+                                font-size: 24px;
                             }
                         }
                     }
