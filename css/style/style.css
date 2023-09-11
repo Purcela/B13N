@@ -254,7 +254,7 @@ body .body-box .all-products .product-type .create .idea-painting,
 body .body-box .all-products .product-type .products .idea-painting {
   width: 100%;
   height: 250px;
-  background-image: url(../../img/create-gif.gif);
+  background-image: url(../../img/painting.gif);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -263,7 +263,7 @@ body .body-box .all-products .product-type .create .product-painting,
 body .body-box .all-products .product-type .products .product-painting {
   width: 100%;
   height: 250px;
-  background-image: url(../../img/product-gif.gif);
+  background-image: url(../../img/product.gif);
   background-size: contain;
   background-repeat: no-repeat;
 }
