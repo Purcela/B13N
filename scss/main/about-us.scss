@@ -14,7 +14,7 @@ body {
             justify-content: space-evenly;
             align-items: flex-start;
             .about-p {
-                font-family: $L-reg;
+                font-family: $fo-reg;
                 line-height: 20px;
                 text-indent: 15px;
                 span {
@@ -48,6 +48,10 @@ body {
                         margin-right: 15px;
                         font-size: 30px;
                     }
+                }
+                .mail-contact,
+                .map-contact {
+                    font-family: $fo-reg;
                 }
             }             
             .about-map {

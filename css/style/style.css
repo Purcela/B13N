@@ -274,7 +274,7 @@ body .body-box .footer-box {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   padding: 10px;
   border-radius: 25px;
   background-color: #d9d6d6;
@@ -297,8 +297,8 @@ body .body-box .footer-box .soc-box .media-icons {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  bottom: 10%;
-  background-color: #d9d6d6;
+  bottom: 90px;
+  background-color: #b8f59d;
   border-radius: 30px;
 }
 body .body-box .footer-box .soc-box .media-icons .fa-brands {
@@ -328,7 +328,7 @@ body .body-box .footer-box .soc-title {
   height: 15px;
   position: fixed;
   left: 50%;
-  bottom: 55px;
+  bottom: 60px;
   font-family: "Henny Penny";
   font-weight: bolder;
   display: none;
@@ -351,6 +351,7 @@ body .body-box .footer-box .menu-box .burger-icon {
   display: block;
   color: black;
   font-size: 30px;
+  padding-top: 3px;
   cursor: pointer;
 }
 body .body-box .footer-box .menu-box .menu-ul1 {
@@ -361,8 +362,8 @@ body .body-box .footer-box .menu-box .menu-ul1 li {
   font-size: 16px;
 }
 body .body-box .footer-box .menu-box .menu-ul1 li .active {
-  font-weight: bold;
-  color: darkgreen;
+  font-weight: bolder;
+  color: darkblue;
 }
 body .body-box .footer-box .menu-box .menu-ul1 li a {
   color: black;
@@ -384,28 +385,21 @@ body .body-box .footer-box .menu-box .menu-ul1.open-menu {
   position: fixed;
   left: 50%;
   padding: 5px;
-  transform: translate(-50%, -80%);
-  background-color: #dddde1;
+  transform: translate(-50%, -85%);
+  background-color: #b8f59d;
 }
 body .body-box .footer-box .menu-title {
   width: 60px;
   height: 15px;
   position: fixed;
   left: 50%;
-  bottom: 55px;
+  bottom: 60px;
   font-family: "Henny Penny";
   font-weight: bolder;
   display: none;
   transform: translate(-50%, -50%);
 }
 body .body-box .footer-box .menu-box:hover + p {
-  display: block;
-}
-body .body-box .footer-box .about-us .about-title {
-  font-family: "Lobster";
-  margin-bottom: 10px;
-}
-body .body-box .footer-box .about-us:hover + p {
   display: block;
 }
 body .body-box .footer-box .container {
@@ -417,14 +411,14 @@ body .body-box .footer-box .container {
   position: relative;
 }
 body .body-box .footer-box .container .circle-bg {
+  height: 30px;
+  width: 30px;
   background-color: #1877F2;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
   position: absolute;
   vertical-align: middle;
 }
@@ -434,6 +428,8 @@ body .body-box .footer-box .container .circle-bg .icon {
   font-size: 15px;
   text-align: center;
   vertical-align: middle;
+  padding-top: 3px;
+  padding-right: 2px;
 }
 body .body-box .footer-box .container .outer-icons {
   height: 150px;
@@ -442,8 +438,8 @@ body .body-box .footer-box .container .outer-icons {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  bottom: 10%;
-  background-color: #d9d6d6;
+  bottom: 90px;
+  background-color: #b8f59d;
   border-radius: 30px;
   padding-top: 8px;
 }
@@ -476,7 +472,7 @@ body .body-box .footer-box .share-title {
   height: 15px;
   position: fixed;
   left: 50%;
-  bottom: 55px;
+  bottom: 60px;
   font-family: "Henny Penny";
   font-weight: bolder;
   display: none;
@@ -514,7 +510,7 @@ body .about-body-box .about-text {
   align-items: flex-start;
 }
 body .about-body-box .about-text .about-p {
-  font-family: "Lobster";
+  font-family: "Fjalla One";
   line-height: 20px;
   text-indent: 15px;
 }
@@ -551,6 +547,10 @@ body .about-body-box .about-info-box .about-info a {
 body .about-body-box .about-info-box .about-info a i {
   margin-right: 15px;
   font-size: 30px;
+}
+body .about-body-box .about-info-box .about-info .mail-contact,
+body .about-body-box .about-info-box .about-info .map-contact {
+  font-family: "Fjalla One";
 }
 body .about-body-box .about-info-box .about-map {
   width: 50%;
