@@ -294,12 +294,13 @@ body .body-box .footer-box .soc-box .media-icons {
   width: 35px;
   height: 150px;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
-  bottom: 90px;
+  bottom: 94px;
   background-color: #b8f59d;
   border-radius: 30px;
+  padding-bottom: 8px;
 }
 body .body-box .footer-box .soc-box .media-icons .fa-brands {
   width: 35px;
@@ -438,7 +439,7 @@ body .body-box .footer-box .container .outer-icons {
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
-  bottom: 90px;
+  bottom: 94px;
   background-color: #b8f59d;
   border-radius: 30px;
   padding-top: 8px;
