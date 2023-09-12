@@ -403,6 +403,31 @@ body .body-box .footer-box .menu-title {
 body .body-box .footer-box .menu-box:hover + p {
   display: block;
 }
+body .body-box .footer-box .share-button {
+  width: 30px;
+  height: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #1877F2;
+  border-radius: 30px;
+  border-style: none;
+}
+@media (max-width: 1024px) {
+  body .body-box .footer-box .share-button {
+    display: flex;
+  }
+}
+body .body-box .footer-box .share-button .icon {
+  color: white;
+  display: table-cell;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 3px;
+  padding-right: 2px;
+}
 body .body-box .footer-box .container {
   width: 30px;
   height: 30px;
@@ -410,6 +435,11 @@ body .body-box .footer-box .container {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media (max-width: 1024px) {
+  body .body-box .footer-box .container {
+    display: none;
+  }
 }
 body .body-box .footer-box .container .circle-bg {
   height: 30px;

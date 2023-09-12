@@ -278,6 +278,29 @@ body {
             }             
             .menu-box:hover + p {
                 display: block;
+            }
+            .share-button {
+                width: 30px;
+                height: 30px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                background-color: #1877F2;
+                border-radius: 30px;
+                border-style: none;
+                @media (max-width: 1024px) {
+                    display: flex;
+                }
+                .icon {
+                    color: white;
+                    display: table-cell;
+                    font-size: 15px;
+                    text-align: center;
+                    vertical-align: middle; 
+                    padding-top: 3px;
+                    padding-right: 2px;                       
+                }
             }   
             .container {
                 width: 30px;
@@ -286,6 +309,9 @@ body {
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                @media (max-width: 1024px) {
+                    display: none;
+                }
                 .circle-bg {
                     height: 30px;
                     width: 30px;

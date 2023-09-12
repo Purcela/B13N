@@ -41,8 +41,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+//-------------------------------- share --------------------------------
+var urlToShare = "https://purcela.github.io/BeDifferentB13/";
 
-// -------------------------  share  ---------------------------------
+// Create a function to handle button click
+document.getElementById("shareButton").addEventListener("click", function() {
+    // Check if the user has sharing capabilities
+    if (navigator.share) {
+        // If yes, create a ShareData object
+        var shareData = {
+            title: "https://www.facebook.com/profile.php?id=61550044239770",
+            text: "Break The Stereotypes, Be Different B13",
+            url: urlToShare,
+        };
+
+        // Call the share() method to share the data
+        navigator.share(shareData)
+            .then(function() {
+                console.log("Successfully shared");
+            })
+            .catch(function(error) {
+                console.error("Error while trying to share:", error);
+            });
+    } else {
+        // If the share function is not supported, provide an alternative sharing method
+        alert("Sharing is not supported on this device.");
+    }
+});
+
+// -----------------------------------------
 
 $(document).ready(function() {
     var open = false;
