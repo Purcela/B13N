@@ -64,8 +64,95 @@
             </div>             
         </header>
         <div class="body-box">
-           
-            
+            <div class="gallery-search">
+                <div class="search-box">
+                    <input type="text" id="searchInput" oninput="searchByID()" placeholder="Search with Name">
+                </div>                    
+                <select class="select-product" id="mySelect" onchange="myFunction()">
+                    <option value="all"> All </option>
+                    <option value="clothes"> clothes </option>
+                    <option value="mugs"> Mugs </option>
+                    <option value="Bags"> Bags </option>
+                    <option value="kychains"> Kychain </option>  
+                    <option value="Phones"> Phones </option>
+                    <option value="Pillows"> Pillows </option>
+                    <option value="others"> Others </option>
+                </select>
+                <select class="select-product-type" id="types">
+
+                </select>
+                <select class="select-type" id="clothes">
+                    <option value="all"> All </option>
+                    <option value="t-shirts"> T-shirt </option>
+                    <option value="hoods"> Hoods </option>
+                    <option value="womans"> For womans </option>
+                    <option value="babies"> For babies </option>
+                    <option value="others"> Others </option>
+                </select>
+                <select class="select-type" id="mugs">
+                    <option value="all"> All </option>
+                    <option value="coffee"> Coffee mugs </option>
+                    <option value="thermo"> Thermo mugs </option>
+                    <option value="others"> Others </option>
+                </select>
+                <select class="select-type" id="bags">
+                    <option value="all"> All </option>
+                    <option value="bags"> Bags </option>
+                    <option value="handbags"> Handbags </option>
+                    <option value="backpacks"> Backpacks </option>
+                    <option value="others"> Others </option>
+                </select>
+                <select class="select-type" id="phones">
+                    <option value="all"> All </option>
+                    <option value="iphone"> Iphones </option>
+                    <option value="samsung"> Samsungs </option>
+                    <option value="samsung"> Huawei </option>
+                    <option value="others"> Others </option>
+                </select>
+                <select class="select-type" id="kychains">
+                    <option value="all"> All </option>
+                    <option value="wooden"> Wooden </option>
+                    <option value="metalic"> Metalic </option>
+                    <option value="plastic"> Plastic </option>
+                    <option value="others"> Others </option>
+                </select>
+                <select class="select-type" id="pillows">
+                    <option value="all"> All </option>
+                    <option value="case1"> case 1 </option>
+                    <option value="case2"> case 2 </option>
+                    <option value="others"> Others </option>
+                </select>
+            </div>                
+            <div class="gallery-container">
+                <div class="product-box" value="clothes">
+                    <img data-enlargable class="product-img clothes-img" src="img/clothes/clothes-1.jpg" alt="t-shirt">
+                    <p class="product-title"> kutaisi </p>
+                    <p class="product-id"> TS0001 </p>
+                </div>
+                <div class="product-box" value="clothes">
+                    <img data-enlargable class="product-img clothes-img" src="img/clothes/hood.jpg" alt="t-shirt">
+                    <p class="product-title"> georgia </p>
+                    <p class="product-id"> H0001 </p>
+                </div>
+                <div class="product-box" value="clothes">
+                    <img data-enlargable class="product-img clothes-img" src="img/clothes/babi-Bodysuits.jpg" alt="t-shirt">
+                    <p class="product-title"> babie </p>
+                    <p class="product-id"> BB0001 </p>
+                </div>
+                <div class="product-box" value="clothes">
+                    <img data-enlargable class="product-img clothes-img" src="img/clothes/woman-Bodysuit.jpg" alt="t-shirt">
+                    <p class="product-title"> woman </p>
+                    <p class="product-id"> WB0001 </p>
+                </div>
+                <div class="product-box" value="clothes">
+                    <img data-enlargable class="product-img clothes-img" src="img/clothes/t-shirt-1.jpg" alt="t-shirt">
+                    <p class="product-title"> white and black </p>
+                    <p class="product-id"> TS0002 </p>
+                </div>
+
+
+                
+            </div>
             <div class="footer-box">            
                 <div class="soc-box">
                     <i class="fa-solid fa-user-group fa-beat-fade" style="color: #ffffff;"></i>
