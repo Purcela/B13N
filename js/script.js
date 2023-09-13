@@ -15,6 +15,41 @@ $(document).ready(function () {
     });
 });
 
+// -----------------------------  search ----------------------------
+
+function searchByID() {
+    // Get the input value from the search box
+    var searchValue = document.getElementById("searchInput").value.toLowerCase();
+
+    // Get the selected category from the dropdown
+    var selectedCategory = document.getElementById("mySelect").value;
+
+    // Get all the product boxes
+    var productBoxes = document.querySelectorAll(".product-box");
+
+    // Loop through each product box and check if it matches the search criteria
+    productBoxes.forEach(function (box) {
+        var title = box.querySelector(".product-title").textContent.toLowerCase();
+        var id = box.querySelector(".product-id").textContent.toLowerCase();
+
+        // Check if the selected category is "All Products" or if the box matches the selected category
+        if (selectedCategory === "all" || box.id === selectedCategory) {
+            if (title.includes(searchValue) || id.includes(searchValue)) {
+                box.style.display = "flex"; // Show the box
+            } else {
+                box.style.display = "none"; // Hide the box
+            }
+        } else {
+            box.style.display = "none"; // Hide the box if it doesn't match the selected category
+        }
+    });
+}
+
+function mySelect() {
+    // Call the search function when the category dropdown changes
+    searchByID();
+}
+
 // -------------------------  soc media  ---------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -41,7 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 //-------------------------------- share --------------------------------
+
 var urlToShare = "https://purcela.github.io/BeDifferentB13/";
 
 // Create a function to handle button click
@@ -123,9 +160,6 @@ $(document).ready(function() {
     });
 });
 
-
-
-
 // -----------------------------  hide footer ----------------------------
 
 const footerBox = document.querySelector('.footer-box');
@@ -136,61 +170,73 @@ toggleButton.addEventListener('click', () => {
 });
 
 
-// -----------------------------  sort by ----------------------------
+// -------------------------------- select product  --------------------------------------
 
-// Get the gallery container and all the gallery images
-const galleryContainer = document.querySelector('.gallery-container');
-const galleryImages = document.querySelectorAll('.product-box');
-
-function myFunction() {
-    var selectedCategory = document.getElementById("mySelect").value;
-
-    // Loop through all gallery images
-    galleryImages.forEach((img) => {
-        if (selectedCategory === 'all' || img.getAttribute('value') === selectedCategory.toLowerCase()) {
-            img.style.display = 'flex'; // Show the image if it matches the selected category or 'All'
+document.getElementById('product-select').addEventListener('change', function() {
+    const selectedValue = this.value;
+    const productBoxes = document.querySelectorAll('.product-box');
+   
+    productBoxes.forEach(function(box) {
+        if (selectedValue === 'all' || box.getAttribute('data-value').includes(selectedValue)) {
+            box.style.display = 'block';
         } else {
-            img.style.display = 'none'; // Hide the image if it doesn't match the selected category
+            box.style.display = 'none';
         }
     });
+});
 
-    document.getElementById("demo").innerHTML = "You selected: " + selectedCategory;
-}
 
-//---------------------------- gallery view --------------------------------
+// -------------------------------- testing --------------------------------------
 
-const images = document.querySelectorAll('[data-enlargable]');
-const modal = document.querySelector('.image-modal');
-const modalImg = document.getElementById('zoomed-img');
-const closeBtn = document.querySelector('.close-modal');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-let currentIndex = 0;
-
-images.forEach((image, index) => {
-    image.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImg.src = image.src;
-        currentIndex = index;
+// Add a change event listener to the product-select element
+document.getElementById('product-select').addEventListener('change', function () {
+    const selectedValue = this.value;
+    const productBoxes = document.querySelectorAll('.product-box');
+  
+    // Hide all product boxes initially
+    productBoxes.forEach(function (box) {
+      box.style.display = 'none';
     });
-});
-
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        modalImg.src = images[currentIndex].src;
+  
+    // Hide all select-type elements
+    const selectTypes = document.querySelectorAll('.select-type');
+    selectTypes.forEach(function (selectType) {
+      selectType.style.display = 'none';
+    });
+  
+    // Show the product boxes based on the selected option
+    if (selectedValue === 'all') {
+      productBoxes.forEach(function (box) {
+        box.style.display = 'block';
+      });
+    } else {
+      // Show the corresponding select-type element
+      const selectedTypeElement = document.querySelector(`.select-${selectedValue}`);
+      selectedTypeElement.style.display = 'block';
+  
+      // Add change event listeners to the corresponding select-type elements
+      selectedTypeElement.addEventListener('change', function () {
+        const selectedType = this.value;
+  
+        // Hide all product boxes first
+        productBoxes.forEach(function (box) {
+          box.style.display = 'none';
+        });
+  
+        // Show the product boxes with the same "value" attribute as the selected type
+        productBoxes.forEach(function (box) {
+          if (box.getAttribute('value') === selectedType) {
+            box.style.display = 'block';
+          }
+        });
+      });
     }
-});
+  
+    // Close the product-select dropdown
+    this.blur();
+  });
+  
+  // Trigger the change event to initialize the filtering based on the initial selected option
+  document.getElementById('product-select').dispatchEvent(new Event('change'));
 
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-        currentIndex++;
-        modalImg.src = images[currentIndex].src;
-    }
-});
-
-
+  
