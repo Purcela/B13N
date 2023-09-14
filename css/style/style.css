@@ -539,6 +539,11 @@ body .body-box .hidden {
   top: 185px;
   transform: translate(-50%, 0);
 }
+@media (max-width: 480px) {
+  .prodyct-body .gallery-body-box .gallery-search {
+    width: 220px;
+  }
+}
 .prodyct-body .gallery-body-box .gallery-search .search-box {
   width: 100%;
   max-width: 220px;

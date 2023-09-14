@@ -12,6 +12,9 @@
             left: 50%;
             top: 185px;
             transform: translate(-50%, 0);
+            @media ( max-width: 480px ) {
+                width: 220px;
+            }
             .search-box {
                 width: 100%;
                 max-width: 220px;
