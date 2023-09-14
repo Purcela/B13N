@@ -77,7 +77,7 @@
                     <option value="bags"> Bags </option>
                     <option value="pillows"> Pillows </option>
                 </select>
-                <select class="select-type selecct-somthing" onchange="mySelect()">
+                <select class="select-type selecct-somthing" id="somthing"onchange="mySelect()">
                     <option class="somthing" value="somthing">  << choose </option>
                 </select>
                 <select class="select-clothes select-type" id="clothes-select" onchange="mySelect()">
@@ -88,33 +88,33 @@
                     <option value="other-clothe"> Other </option>
                 </select>
                 <select class="select-mugs select-type" id="mugs-select" onchange="mySelect()">
-                    <option value="mugs"> ALL </option> 
+                    <option value="all-mugs"> All </option> 
                     <option value="coffee-mug"> Coffee Mugs </option>
                     <option value="thermo-mug"> Thermo Mugs </option>
                     <option value="other-mug"> Other </option>
                 </select>
                 <select class="select-phones select-type" id="phones-select" onchange="mySelect()">
-                    <option value="phones"> ALL </option> 
+                    <option value="all-phones"> All </option> 
                     <option value="iphone"> Iphone cases </option>
                     <option value="samsung"> samsung cases </option>
                     <option value="other-phones"> Other </option>
                 </select>
                 <select class="select-kychains select-type" id="kychains-select" onchange="mySelect()">
-                    <option value="kychains"> ALL </option> 
+                    <option value="all-kychains"> All </option> 
                     <option value="wooden"> wooden </option> 
                     <option value="metal"> metal </option>
                     <option value="puzzle"> puzzle </option>
                     <option value="other-kychains"> Other </option>
                 </select>
                 <select class="select-bags select-type" id="bags-select" onchange="mySelect()">
-                    <option value="bags"> ALL </option> 
+                    <option value="all-bags"> All </option> 
                     <option value="backpack"> backpack </option> 
                     <option value="handbag"> handbag </option>
                     <option value="bag"> bags </option>
                     <option value="other-bags"> Other </option>
                 </select> 
                 <select class="select-pillows select-type" id="pillows-select" onchange="mySelect()">
-                    <option value="pillows"> ALL </option> 
+                    <option value="all-pillows"> All </option> 
                     <option value="case1"> case1 </option>
                     <option value="case2"> case2 </option>
                     <option value="other-pillows"> Other </option>
@@ -125,92 +125,92 @@
             <div id="product-container" class="gallery-container">
 
 <!-- --------------- clothes ------------------ -->
-                <div class="product-box" data-value="clothes" value="t-shirt">
+                <div class="product-box" data-value="clothes" value="all-clothes t-shirt">
                     <img class="product-img" src="img/clothes/t-shirt-8.jpg" alt="t-shirt">
                     <p class="product-title"> made in 90's </p>
                     <p class="product-id"> CL0001 </p>
                 </div>
-                <div class="product-box" data-value="clothes" value="hood">
+                <div class="product-box" data-value="clothes" value="all-clothes hood">
                     <img class="product-img" src="img/clothes/hood.jpg" alt="hood">
                     <p class="product-title"> georgia </p>
                     <p class="product-id"> CL0002 </p>
                 </div>
-                <div class="product-box" data-value="clothes" value="babie">
+                <div class="product-box" data-value="clothes" value="all-clothes babie">
                     <img class="product-img" src="img/clothes/babi-Bodysuits.jpg" alt="babie">
                     <p class="product-title"> babie </p>
                     <p class="product-id"> CL0003 </p>
                 </div>
-                <div class="product-box" data-value="clothes" value="other-clothe">
+                <div class="product-box" data-value="clothes" value="all-clothes other-clothe">
                     <img class="product-img" src="img/clothes/t-shirt-1.jpg" alt="other">
                     <p class="product-title"> white and black </p>
                     <p class="product-id"> CL0005 </p>
                 </div>
 
 <!-- ------------------ mugs ------------------- -->
-                <div class="product-box" data-value="mugs" value="coffee-mug">
+                <div class="product-box" data-value="mugs" value="all-mugs coffee-mug">
                     <img class="product-img" src="img/mugs/coffee-other-1.jpg" alt="mug">
                     <p class="product-title"> coffee mug </p>
                     <p class="product-id"> CM0001 </p>
                 </div>
-                <div class="product-box" data-value="mugs" value="thermo-mug">
+                <div class="product-box" data-value="mugs" value="all-mugs thermo-mug">
                     <img class="product-img" src="img/mugs/thermo-mug-2.jpg" alt="mug">
                     <p class="product-title"> thermo mug </p>
                     <p class="product-id"> CM0002 </p>
                 </div>
 
 <!-- ----------------- phones ------------------ -->
-                <div class="product-box" data-value="phones" value="iphone">
+                <div class="product-box" data-value="phones" value="all-phones iphone">
                     <img class="product-img" src="img/phones/Phone-Cases-1.jpg" alt="iphone">
                     <p class="product-title"> iphin case </p>
                     <p class="product-id"> PH0001 </p>
                 </div>
-                <div class="product-box" data-value="phones" value="samsung">
+                <div class="product-box" data-value="phones" value="all-phones samsung">
                     <img class="product-img" src="img/phones/Phone-Cases-2.jpg" alt="samsung">
                     <p class="product-title"> samsung case </p>
                     <p class="product-id"> PH0002 </p>
                 </div>
 
 <!-- --------------- Kychains ----------------- -->
-                <div class="product-box" data-value="kychains" value="wooden">
+                <div class="product-box" data-value="kychains" value="all-kychains wooden">
                     <img class="product-img" src="img/keychain/wood-Keychain-2.jpg" alt="wooden">
                     <p class="product-title"> wooden kychain </p>
                     <p class="product-id"> KC0002 </p>
                 </div>
-                <div class="product-box" data-value="kychains" value="metal">
+                <div class="product-box" data-value="kychains" value="all-kychains metal">
                     <img class="product-img" src="img/keychain/metal-Keychain-3.jpg" alt="metal">
                     <p class="product-title"> metal kychain </p>
                     <p class="product-id"> KC0002 </p>
                 </div>
-                <div class="product-box" data-value="kychains" value="puzzle">
+                <div class="product-box" data-value="kychains" value="all-kychains puzzle">
                     <img class="product-img" src="img/keychain/puzzle-Keychain-1.jpg" alt="puzzle">
                     <p class="product-title"> puzzle kychain </p>
                     <p class="product-id"> KC0002 </p>
                 </div>
 
 <!-- ---------------- bags --------------------- -->
-                <div class="product-box" data-value="bags" value="backpack">
+                <div class="product-box" data-value="bags" value="all-bags backpack">
                     <img class="product-img" src="img/bags/backpack-1.jpg" alt="backpack">
                     <p class="product-title"> black backpack </p>
                     <p class="product-id"> BG0001 </p>
                 </div>
-                <div class="product-box" data-value="bags" value="handbag">
+                <div class="product-box" data-value="bags" value="all-bags handbag">
                     <img class="product-img" src="img/bags/bag-1.jpg" alt="handbag">
                     <p class="product-title"> handbag </p>
                     <p class="product-id"> BG0002 </p>
                 </div>
-                <div class="product-box" data-value="bags" value="bag">
+                <div class="product-box" data-value="bags" value="all-bags bag">
                     <img class="product-img" src="img/bags/handbag-1.jpg" alt="bag">
                     <p class="product-title"> bag </p>
                     <p class="product-id"> BG0003 </p>
                 </div>
 
 <!-- ---------------- pillows ---------------- -->
-                <div class="product-box" data-value="pillows" value="case1">
+                <div class="product-box" data-value="pillows" value="all-pillows case1">
                     <img class="product-img" src="img/pillow/Pillow-Cases-1.jpg" alt="case1">
                     <p class="product-title"> pillow case 1 </p>
                     <p class="product-id"> PC0002 </p>
                 </div>
-                <div class="product-box" data-value="pillows" value="case2">
+                <div class="product-box" data-value="pillows" value="all-pillows case2">
                     <img class="product-img" src="img/pillow/Pillow-Cases-2.jpg" alt="case2">
                     <p class="product-title"> pillow case 2 </p>
                     <p class="product-id"> PC0002 </p>

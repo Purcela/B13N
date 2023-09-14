@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//-------------------------------- share --------------------------------
+//-------------------------------- device share --------------------------------
 
 var urlToShare = "https://purcela.github.io/BeDifferentB13/";
 
@@ -106,7 +106,7 @@ document.getElementById("shareButton").addEventListener("click", function() {
     }
 });
 
-// -----------------------------------------
+// ------------------------------ pc share -----
 
 $(document).ready(function() {
     var open = false;
@@ -172,18 +172,7 @@ toggleButton.addEventListener('click', () => {
 
 // -------------------------------- select product  --------------------------------------
 
-document.getElementById('product-select').addEventListener('change', function() {
-    const selectedValue = this.value;
-    const productBoxes = document.querySelectorAll('.product-box');
-   
-    productBoxes.forEach(function(box) {
-        if (selectedValue === 'all' || box.getAttribute('data-value').includes(selectedValue)) {
-            box.style.display = 'block';
-        } else {
-            box.style.display = 'none';
-        }
-    });
-});
+
 
 
 // -------------------------------- testing --------------------------------------
@@ -207,12 +196,34 @@ document.getElementById('product-select').addEventListener('change', function ()
     // Show the product boxes based on the selected option
     if (selectedValue === 'all') {
       productBoxes.forEach(function (box) {
-        box.style.display = 'block';
+        box.style.display = 'flex';
       });
     } else {
       // Show the corresponding select-type element
       const selectedTypeElement = document.querySelector(`.select-${selectedValue}`);
       selectedTypeElement.style.display = 'block';
+  
+      // Automatically select the corresponding "All" option in the second select
+      const clothesSelect = document.getElementById('clothes-select');
+      const mugsSelect = document.getElementById('mugs-select');
+      const phonesSelect = document.getElementById('phones-select');
+      const kychainsSelect = document.getElementById('kychains-select');
+      const bagsSelect = document.getElementById('bags-select');
+      const pillowsSelect = document.getElementById('pillows-select');
+      
+      if (selectedValue === 'clothes') {
+        clothesSelect.value = 'all-clothes';
+      } else if (selectedValue === 'mugs') {
+        mugsSelect.value = 'all-mugs';
+      } else if (selectedValue === 'phones') {
+        phonesSelect.value = 'all-phones';
+      } else if (selectedValue === 'kychains') {
+        kychainsSelect.value = 'all-kychains';
+      } else if (selectedValue === 'bags') {
+        bagsSelect.value = 'all-bags';
+      } else if (selectedValue === 'pillows') {
+        pillowsSelect.value = 'all-pillows';
+      }
   
       // Add change event listeners to the corresponding select-type elements
       selectedTypeElement.addEventListener('change', function () {
@@ -223,14 +234,18 @@ document.getElementById('product-select').addEventListener('change', function ()
           box.style.display = 'none';
         });
   
-        // Show the product boxes with the same "value" attribute as the selected type
+        // Show the product boxes with values that contain the selected type
         productBoxes.forEach(function (box) {
-          if (box.getAttribute('value') === selectedType) {
-            box.style.display = 'block';
+          const boxValues = box.getAttribute('value');
+          if (boxValues && boxValues.split(' ').includes(selectedType)) {
+            box.style.display = 'flex';
           }
         });
       });
     }
+  
+    // Automatically set the clothes-select to "all-clothes"
+    document.getElementById('clothes-select').value = 'all-clothes';
   
     // Close the product-select dropdown
     this.blur();
@@ -238,5 +253,3 @@ document.getElementById('product-select').addEventListener('change', function ()
   
   // Trigger the change event to initialize the filtering based on the initial selected option
   document.getElementById('product-select').dispatchEvent(new Event('change'));
-
-  

@@ -530,7 +530,7 @@ body .body-box .hidden {
   padding-bottom: 70px;
 }
 .prodyct-body .gallery-body-box .gallery-search {
-  width: 220px;
+  width: 450px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -541,6 +541,7 @@ body .body-box .hidden {
 }
 .prodyct-body .gallery-body-box .gallery-search .search-box {
   width: 100%;
+  max-width: 220px;
   height: 30px;
   margin-bottom: 5px;
 }
