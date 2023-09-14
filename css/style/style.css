@@ -539,7 +539,7 @@ body .body-box .hidden {
   top: 185px;
   transform: translate(-50%, 0);
 }
-@media (max-width: 480px) {
+@media (max-width: 630px) {
   .prodyct-body .gallery-body-box .gallery-search {
     width: 220px;
   }

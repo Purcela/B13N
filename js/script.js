@@ -18,11 +18,11 @@ $(document).ready(function () {
 // -----------------------------  search ----------------------------
 
 function searchByID() {
-    // Get the input value from the search box
-    var searchValue = document.getElementById("searchInput").value.toLowerCase();
+    // Get the input value from the search box and trim it
+    var searchValue = document.getElementById("searchInput").value.toLowerCase().trim();
 
     // Get the selected category from the dropdown
-    var selectedCategory = document.getElementById("mySelect").value;
+    var selectedCategory = document.getElementById("product-select").value;
 
     // Get all the product boxes
     var productBoxes = document.querySelectorAll(".product-box");
@@ -32,8 +32,8 @@ function searchByID() {
         var title = box.querySelector(".product-title").textContent.toLowerCase();
         var id = box.querySelector(".product-id").textContent.toLowerCase();
 
-        // Check if the selected category is "All Products" or if the box matches the selected category
-        if (selectedCategory === "all" || box.id === selectedCategory) {
+        // Check if the selected category is "all" or if the box matches the selected category
+        if (selectedCategory === "all" || box.getAttribute('data-value').includes(selectedCategory)) {
             if (title.includes(searchValue) || id.includes(searchValue)) {
                 box.style.display = "flex"; // Show the box
             } else {
@@ -44,6 +44,7 @@ function searchByID() {
         }
     });
 }
+
 
 function mySelect() {
     // Call the search function when the category dropdown changes
@@ -172,11 +173,6 @@ toggleButton.addEventListener('click', () => {
 
 // -------------------------------- select product  --------------------------------------
 
-
-
-
-// -------------------------------- testing --------------------------------------
-
 // Add a change event listener to the product-select element
 document.getElementById('product-select').addEventListener('change', function () {
     const selectedValue = this.value;
@@ -198,33 +194,16 @@ document.getElementById('product-select').addEventListener('change', function ()
       productBoxes.forEach(function (box) {
         box.style.display = 'flex';
       });
+      // Display the "something" select element
+      document.getElementById('something').style.display = 'block';
     } else {
+      // Hide the "something" select element
+      document.getElementById('something').style.display = 'none';
+
       // Show the corresponding select-type element
       const selectedTypeElement = document.querySelector(`.select-${selectedValue}`);
       selectedTypeElement.style.display = 'block';
-  
-      // Automatically select the corresponding "All" option in the second select
-      const clothesSelect = document.getElementById('clothes-select');
-      const mugsSelect = document.getElementById('mugs-select');
-      const phonesSelect = document.getElementById('phones-select');
-      const kychainsSelect = document.getElementById('kychains-select');
-      const bagsSelect = document.getElementById('bags-select');
-      const pillowsSelect = document.getElementById('pillows-select');
-      
-      if (selectedValue === 'clothes') {
-        clothesSelect.value = 'all-clothes';
-      } else if (selectedValue === 'mugs') {
-        mugsSelect.value = 'all-mugs';
-      } else if (selectedValue === 'phones') {
-        phonesSelect.value = 'all-phones';
-      } else if (selectedValue === 'kychains') {
-        kychainsSelect.value = 'all-kychains';
-      } else if (selectedValue === 'bags') {
-        bagsSelect.value = 'all-bags';
-      } else if (selectedValue === 'pillows') {
-        pillowsSelect.value = 'all-pillows';
-      }
-  
+
       // Add change event listeners to the corresponding select-type elements
       selectedTypeElement.addEventListener('change', function () {
         const selectedType = this.value;
@@ -242,6 +221,14 @@ document.getElementById('product-select').addEventListener('change', function ()
           }
         });
       });
+      
+      // Show all product boxes with the same selectedValue
+      productBoxes.forEach(function (box) {
+        const boxValues = box.getAttribute('value');
+        if (boxValues && boxValues.split(' ').includes(selectedValue)) {
+          box.style.display = 'flex';
+        }
+      });
     }
   
     // Automatically set the clothes-select to "all-clothes"
@@ -251,5 +238,47 @@ document.getElementById('product-select').addEventListener('change', function ()
     this.blur();
   });
   
-  // Trigger the change event to initialize the filtering based on the initial selected option
-  document.getElementById('product-select').dispatchEvent(new Event('change'));
+// Trigger the change event to initialize the filtering based on the initial selected option
+document.getElementById('product-select').dispatchEvent(new Event('change'));
+
+
+// Add a change event listener to the product-select element
+document.getElementById('product-select').addEventListener('change', function () {
+    const selectedValue = this.value;
+    const productBoxes = document.querySelectorAll('.product-box');
+
+    // Show all product boxes if "all" is selected
+    if (selectedValue === 'all') {
+        productBoxes.forEach(function (box) {
+            box.style.display = 'flex';
+        });
+    } else {
+        // Hide all product boxes initially
+        productBoxes.forEach(function (box) {
+            box.style.display = 'none';
+        });
+
+        // Show the product boxes with the selectedValue
+        productBoxes.forEach(function (box) {
+            const boxValues = box.getAttribute('value');
+            if (boxValues && boxValues.includes(selectedValue)) {
+                box.style.display = 'flex';
+            }
+        });
+    }
+
+    // Automatically set the "something" select to "choose" when not selecting "all"
+    if (selectedValue === 'all') {
+        document.getElementById('somthing').value = 'choose';
+    } else {
+        document.getElementById('somthing').value = 'choose';
+    }
+
+    // Close the product-select dropdown
+    this.blur();
+});
+
+// Trigger the change event to initialize the filtering based on the initial selected option
+document.getElementById('product-select').dispatchEvent(new Event('change'));
+
+// -------------------------------- testing --------------------------------------
