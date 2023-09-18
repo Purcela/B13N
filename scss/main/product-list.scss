@@ -44,6 +44,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            .image-modal{
+                .close-modal {
+                    display: none;
+                }
+                .modal-content {
+                    width: 60%;
+                    max-width: 650px;
+                    height: auto;
+                    position: fixed;
+                    top: 58%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .prev-btn {
+                    display: none;
+                }
+                .next-btn {
+                    display: none;
+                }
+            }
             .product-box { 
                 width: 150px;
                 height: 200px;

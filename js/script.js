@@ -112,40 +112,36 @@ document.getElementById("shareButton").addEventListener("click", function() {
 $(document).ready(function() {
     var open = false;
 
-    // Click event on the container
-    $('.container').on('click', function(event) {
-        event.stopPropagation();
-
-        if (!open) {
-            $('.circle-bg').animate({
-                height: '+=10px',
-                width: '+=10px'
-            }, 300);
-
-            $('.outer-icons').css('display', 'flex'); // Show the outer-icons
-            $('.icon').fadeOut();
-            $('.circle-bg').html("<i class='icon fa fa-times' style='display: none'></i>");
-            $('.icon').fadeIn();
-
-            open = true;
-        } else {
-            $('.circle-bg').animate({
-                height: '-=10px',
-                width: '-=10px'
-            }, 200);
-
-            $('.outer-icons').css('display', 'none'); // Hide the outer-icons
-            $('.icon').fadeOut();
-            $('.circle-bg').html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
-            $('.icon').fadeIn();
-
-            open = false;
-        }
-    });
-
-    // Click event on the document to close when clicking outside the container
+    // Click event on the container and the document
     $(document).on('click', function(event) {
-        if (open && !$(event.target).closest('.container').length) {
+        if ($(event.target).closest('.container').length) {
+            event.stopPropagation();
+            if (!open) {
+                $('.circle-bg').animate({
+                    height: '+=10px',
+                    width: '+=10px'
+                }, 300);
+
+                $('.outer-icons').css('display', 'flex'); // Show the outer-icons
+                $('.icon').fadeOut();
+                $('.circle-bg').html("<i class='icon fa fa-times' style='display: none'></i>");
+                $('.icon').fadeIn();
+
+                open = true;
+            } else {
+                $('.circle-bg').animate({
+                    height: '-=10px',
+                    width: '-=10px'
+                }, 200);
+
+                $('.outer-icons').css('display', 'none'); // Hide the outer-icons
+                $('.icon').fadeOut();
+                $('.circle-bg').html("<i class='icon fa-solid fa-share-nodes fa-beat-fade fa-xs' style='display: none'></i>");
+                $('.icon').fadeIn();
+
+                open = false;
+            }
+        } else if (open) {
             $('.circle-bg').animate({
                 height: '-=10px',
                 width: '-=10px'
@@ -160,6 +156,7 @@ $(document).ready(function() {
         }
     });
 });
+
 
 // -----------------------------  hide footer ----------------------------
 
@@ -171,7 +168,7 @@ toggleButton.addEventListener('click', () => {
 });
 
 
-// -------------------------------- select product  --------------------------------------
+// -------------------------------- sorting product  --------------------------------------
 
 // Add a change event listener to the product-select element
 document.getElementById('product-select').addEventListener('change', function () {
@@ -282,3 +279,42 @@ document.getElementById('product-select').addEventListener('change', function ()
 document.getElementById('product-select').dispatchEvent(new Event('change'));
 
 // -------------------------------- testing --------------------------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('[data-enlargable]');
+    const modal = document.querySelector('.image-modal');
+    const modalImg = document.getElementById('zoomed-img');
+    const closeBtn = document.querySelector('.close-modal');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            modal.style.display = 'block';
+            modalImg.src = image.src;
+            currentIndex = index;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            modalImg.src = images[currentIndex].src;
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+            modalImg.src = images[currentIndex].src;
+        }
+    });
+});
+
+
+

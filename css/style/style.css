@@ -573,6 +573,24 @@ body .body-box .hidden {
   flex-wrap: wrap;
   justify-content: center;
 }
+.prodyct-body .gallery-body-box .gallery-container .image-modal .close-modal {
+  display: none;
+}
+.prodyct-body .gallery-body-box .gallery-container .image-modal .modal-content {
+  width: 60%;
+  max-width: 650px;
+  height: auto;
+  position: fixed;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.prodyct-body .gallery-body-box .gallery-container .image-modal .prev-btn {
+  display: none;
+}
+.prodyct-body .gallery-body-box .gallery-container .image-modal .next-btn {
+  display: none;
+}
 .prodyct-body .gallery-body-box .gallery-container .product-box {
   width: 150px;
   height: 200px;
