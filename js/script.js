@@ -282,39 +282,36 @@ document.getElementById('product-select').dispatchEvent(new Event('change'));
 
 document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('[data-enlargable]');
-    const modal = document.querySelector('.image-modal');
+    const modal = document.querySelector('#fullscreen-image');
     const modalImg = document.getElementById('zoomed-img');
-    const closeBtn = document.querySelector('.close-modal');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    const closeFullscreenBtn = document.querySelector('#close-fullscreen');
+    const prevFullscreenBtn = document.querySelector('#prev-fullscreen');
+    const nextFullscreenBtn = document.querySelector('#next-fullscreen');
     let currentIndex = 0;
-
+    let isZoomed = false;
     images.forEach((image, index) => {
         image.addEventListener('click', () => {
-            modal.style.display = 'block';
+            modal.style.display = 'flex';
             modalImg.src = image.src;
             currentIndex = index;
         });
     });
-
-    closeBtn.addEventListener('click', () => {
+    closeFullscreenBtn.addEventListener('click', () => {
         modal.style.display = 'none';
+        modalImg.classList.remove('zoomed');
+        isZoomed = false;
     });
-
-    prevBtn.addEventListener('click', () => {
+    prevFullscreenBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
             modalImg.src = images[currentIndex].src;
         }
     });
-
-    nextBtn.addEventListener('click', () => {
+    
+    nextFullscreenBtn.addEventListener('click', () => {
         if (currentIndex < images.length - 1) {
             currentIndex++;
             modalImg.src = images[currentIndex].src;
         }
     });
 });
-
-
-

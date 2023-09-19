@@ -122,11 +122,16 @@
             </div>
 
             <div id="product-container" class="gallery-container">
-                <div class="image-modal">
-                    <span class="close-modal">&times;</span>
-                    <img id="zoomed-img" class="modal-content">
-                    <span class="prev-btn">&lt;</span>
-                    <span class="next-btn">&gt;</span>
+                <div class="image-modal" id="fullscreen-image">
+                    <span class="close-modal" id="close-fullscreen">
+                    </span>
+                    <img id="zoomed-img" class="modal-content" data-enlargable>
+                    <span class="prev-btn" id="prev-fullscreen">
+                        <i class="fa-solid fa-angle-right fa-rotate-180 fa-2xl" style="color: black;"></i>
+                    </span>
+                    <span class="next-btn" id="next-fullscreen">
+                        <i class="fa-solid fa-angle-right fa-2xl" style="color: black;"></i>
+                    </span>
                 </div>
                                
 
