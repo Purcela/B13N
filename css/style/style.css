@@ -574,6 +574,8 @@ body .body-box .hidden {
   justify-content: center;
 }
 .prodyct-body .gallery-body-box .gallery-container .image-modal {
+  height: 90%;
+  width: auto;
   display: none;
   justify-content: center;
   align-items: center;
@@ -581,13 +583,11 @@ body .body-box .hidden {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  height: 90%;
-  width: auto;
   background-color: black;
   z-index: 5;
   text-align: center;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1080px) {
   .prodyct-body .gallery-body-box .gallery-container .image-modal {
     width: 90%;
     height: auto;
@@ -601,7 +601,7 @@ body .body-box .hidden {
   top: 50%;
   left: 50%;
   z-index: 2;
-  cursor: pointer;
+  cursor: zoom-out;
 }
 .prodyct-body .gallery-body-box .gallery-container .image-modal img {
   margin: auto;
