@@ -554,14 +554,14 @@ body .body-box .hidden {
   width: 100%;
   height: 100%;
 }
-.prodyct-body .gallery-body-box .gallery-search .select-product {
+.prodyct-body .gallery-body-box .gallery-search .select {
   width: 100px;
   height: 30px;
+  font-family: "Fjalla One";
+  font-size: 15px;
 }
 .prodyct-body .gallery-body-box .gallery-search .select-type {
   display: none;
-  width: 100px;
-  height: 30px;
 }
 .prodyct-body .gallery-body-box .gallery-search .selecct-somthing {
   display: block;
