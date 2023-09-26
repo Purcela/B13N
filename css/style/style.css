@@ -553,6 +553,8 @@ body .body-box .hidden {
 .prodyct-body .gallery-body-box .gallery-search .search-box input {
   width: 100%;
   height: 100%;
+  font-family: "Fjalla One";
+  font-size: 15px;
 }
 .prodyct-body .gallery-body-box .gallery-search .select {
   width: 100px;

@@ -278,7 +278,7 @@ document.getElementById('product-select').addEventListener('change', function ()
 // Trigger the change event to initialize the filtering based on the initial selected option
 document.getElementById('product-select').dispatchEvent(new Event('change'));
 
-// -------------------------------- testing --------------------------------------
+// -------------------------------- Gallery zoom --------------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('[data-enlargable]');
