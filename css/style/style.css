@@ -522,14 +522,189 @@ body .body-box .hidden {
   display: none;
 }
 
-.prodyct-body {
+.create-body .body-box {
+  justify-content: space-evenly;
+}
+.create-body .body-box .create-body-box {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.create-body .body-box .create-body-box .choose {
+  width: 50px;
+  height: 50px;
+  margin: 5px 10px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+@media (max-width: 400px) {
+  .create-body .body-box .create-body-box .choose {
+    width: 35px;
+    height: 35px;
+  }
+}
+.create-body .body-box .create-body-box .change-product {
+  background-image: url(../../img/painting.gif);
+}
+.create-body .body-box .create-body-box .color-box {
+  background-image: url(../../img/create/color-picker.png);
+}
+.create-body .body-box .create-body-box .icon-box {
+  background-color: lightskyblue;
+}
+.create-body .body-box .create-body-box .text-box {
+  width: 80%;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: text;
+}
+.create-body .body-box .create-body-box .product-list {
+  width: 400px;
+  max-height: 400px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: auto;
+}
+@media (max-width: 550px) {
+  .create-body .body-box .create-body-box .product-list {
+    width: 260px;
+  }
+}
+.create-body .body-box .create-body-box .product-list .items {
+  width: 115px;
+  height: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+.create-body .body-box .create-body-box .product-list .items .fa-rotate {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+@media (max-width: 560px) {
+  .create-body .body-box .create-body-box .product-list .items .fa-rotate {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 560px) {
+  .create-body .body-box .create-body-box .product-list .items {
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+  }
+}
+.create-body .body-box .create-body-box .product-list .front {
+  display: flex;
+}
+.create-body .body-box .create-body-box .product-list .back {
+  display: none;
+}
+.create-body .body-box .create-body-box .product-list .upload-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-width: 0;
+}
+.create-body .body-box .create-body-box .product-list .upload-button i {
+  font-size: 70px;
+  line-height: 1em;
+}
+@media (max-width: 550px) {
+  .create-body .body-box .create-body-box .product-list .upload-button i {
+    font-size: 30px;
+  }
+}
+.create-body .body-box .create-body-box .color-list {
+  width: 240px;
+  max-height: 240px;
+  display: none;
+  flex-wrap: wrap;
+  background-color: #a39780;
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: auto;
+}
+.create-body .body-box .create-body-box .color-list .colors {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.create-body .body-box .create-body-box .icon-list {
+  width: 260px;
+  max-height: 250px;
+  display: none;
+  flex-wrap: wrap;
+  background-color: white;
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  overflow: auto;
+}
+.create-body .body-box .create-body-box .icon-list .icons {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.create-body .body-box .create-body-box .icon-list .upload-button {
+  position: fixed;
+  border-width: 0;
+}
+.create-body .body-box .create-body-box .icon-list .upload-button i {
+  font-size: 45px;
+  line-height: 1em;
+}
+.create-body .body-box .item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: black;
+}
+.create-body .body-box .item-container img {
+  width: 100%;
+  max-width: 451px;
+  height: 100%;
+  max-height: 551px;
+}
+.create-body .create-body-big-box {
+  height: 100vh;
+}
+
+.product-body {
   height: 100%;
 }
-.prodyct-body .gallery-body-box {
+.product-body .gallery-body-box {
   padding-top: 250px;
   padding-bottom: 70px;
 }
-.prodyct-body .gallery-body-box .gallery-search {
+.product-body .gallery-body-box .gallery-search {
   width: 450px;
   display: flex;
   flex-wrap: wrap;
@@ -540,42 +715,42 @@ body .body-box .hidden {
   transform: translate(-50%, 0);
 }
 @media (max-width: 630px) {
-  .prodyct-body .gallery-body-box .gallery-search {
+  .product-body .gallery-body-box .gallery-search {
     width: 220px;
   }
 }
-.prodyct-body .gallery-body-box .gallery-search .search-box {
+.product-body .gallery-body-box .gallery-search .search-box {
   width: 100%;
   max-width: 220px;
   height: 30px;
   margin-bottom: 5px;
 }
-.prodyct-body .gallery-body-box .gallery-search .search-box input {
+.product-body .gallery-body-box .gallery-search .search-box input {
   width: 100%;
   height: 100%;
   font-family: "Fjalla One";
   font-size: 15px;
 }
-.prodyct-body .gallery-body-box .gallery-search .select {
+.product-body .gallery-body-box .gallery-search .select {
   width: 100px;
   height: 30px;
   font-family: "Fjalla One";
   font-size: 15px;
 }
-.prodyct-body .gallery-body-box .gallery-search .select-type {
+.product-body .gallery-body-box .gallery-search .select-type {
   display: none;
 }
-.prodyct-body .gallery-body-box .gallery-search .selecct-somthing {
+.product-body .gallery-body-box .gallery-search .selecct-somthing {
   display: block;
 }
-.prodyct-body .gallery-body-box .gallery-container {
+.product-body .gallery-body-box .gallery-container {
   width: 99%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.prodyct-body .gallery-body-box .gallery-container .image-modal {
+.product-body .gallery-body-box .gallery-container .image-modal {
   height: 90%;
   width: auto;
   display: none;
@@ -590,12 +765,12 @@ body .body-box .hidden {
   text-align: center;
 }
 @media (max-width: 1080px) {
-  .prodyct-body .gallery-body-box .gallery-container .image-modal {
+  .product-body .gallery-body-box .gallery-container .image-modal {
     width: 90%;
     height: auto;
   }
 }
-.prodyct-body .gallery-body-box .gallery-container .image-modal .close-modal {
+.product-body .gallery-body-box .gallery-container .image-modal .close-modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -605,14 +780,14 @@ body .body-box .hidden {
   z-index: 2;
   cursor: zoom-out;
 }
-.prodyct-body .gallery-body-box .gallery-container .image-modal img {
+.product-body .gallery-body-box .gallery-container .image-modal img {
   margin: auto;
   display: block;
 }
-.prodyct-body .gallery-body-box .gallery-container .image-modal .modal-content {
+.product-body .gallery-body-box .gallery-container .image-modal .modal-content {
   width: 100%;
 }
-.prodyct-body .gallery-body-box .gallery-container .image-modal .prev-btn {
+.product-body .gallery-body-box .gallery-container .image-modal .prev-btn {
   width: 50px;
   height: 100%;
   display: flex;
@@ -625,7 +800,7 @@ body .body-box .hidden {
   transform: translate(0, -50%);
   cursor: pointer;
 }
-.prodyct-body .gallery-body-box .gallery-container .image-modal .next-btn {
+.product-body .gallery-body-box .gallery-container .image-modal .next-btn {
   width: 50px;
   height: 100%;
   display: flex;
@@ -638,7 +813,7 @@ body .body-box .hidden {
   transform: translate(0, -50%);
   cursor: pointer;
 }
-.prodyct-body .gallery-body-box .gallery-container .product-box {
+.product-body .gallery-body-box .gallery-container .product-box {
   width: 150px;
   height: 200px;
   margin: 25px;
@@ -647,7 +822,7 @@ body .body-box .hidden {
   justify-content: space-between;
   align-items: center;
 }
-.prodyct-body .gallery-body-box .gallery-container .product-box .product-img {
+.product-body .gallery-body-box .gallery-container .product-box .product-img {
   width: 100%;
   height: 150px;
   cursor: zoom-in;

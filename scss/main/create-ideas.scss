@@ -1,0 +1,167 @@
+.create-body {
+    .body-box {
+        justify-content: space-evenly;
+        .create-body-box {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            .choose {
+                width: 50px;
+                height: 50px;
+                margin: 5px 10px;
+                border-radius: 30px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                cursor: pointer;
+                @media (max-width:400px) {
+                    width: 35px;
+                    height: 35px;
+                    
+                }
+            }
+            .change-product {
+                background-image: url(../../img/painting.gif);
+            }
+            .color-box {
+                background-image: url(../../img/create/color-picker.png);
+            }
+            .icon-box {
+                background-color: lightskyblue;
+            }
+            .text-box {
+                width: 80%;
+                height: 30px;
+                font-size: 20px;
+                margin-top: 10px;
+                cursor: text;
+            }
+            .product-list {
+                width: 400px;
+                max-height: 400px;
+                display: none;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                background-color: white;
+                position: fixed;
+                top: 300px;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                overflow: auto;
+                @media (max-width: 550px) {
+                    width: 260px;
+                }
+                .items {
+                    width: 115px;
+                    height: 115px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    margin: 5px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    cursor: pointer;
+                    .fa-rotate {
+                        color: red;
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                        cursor: pointer;
+                        @media (max-width:560px) {
+                            font-size: 15px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    @media (max-width: 560px) {
+                        width: 55px;
+                        height: 55px;
+                        margin: 5px;
+                    }
+                }
+                .front {
+                    display: flex;
+                }
+                .back {
+                    display: none;
+                }
+                .upload-button {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    border-width: 0;
+                    i {
+                        font-size: 70px;
+                        line-height: 1em;   
+                        @media (max-width: 550px) {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+            .color-list {
+                width: 240px;
+                max-height: 240px;
+                display: none;
+                flex-wrap: wrap;
+                background-color: #a39780;
+                position: fixed;
+                top: 300px;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                overflow: auto;
+                .colors {
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                }
+            }
+            .icon-list {
+                width: 260px;
+                max-height: 250px;
+                display: none;
+                flex-wrap: wrap;
+                background-color: white;
+                position: fixed;
+                top: 300px;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                overflow: auto;
+                .icons {
+                    width: 50px;
+                    height: 50px;
+                    margin: 5px;
+                }
+                .upload-button {
+                    position: fixed;
+                    border-width: 0;
+                    i {
+                        font-size: 45px;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+        .item-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            background-color: black;
+            img {
+                width: 100%;
+                max-width: 451px;
+                height: 100%;
+                max-height: 551px;
+            }
+        }
+    }
+    .create-body-big-box {
+        height: 100vh;
+    }
+}
