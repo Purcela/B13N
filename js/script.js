@@ -263,12 +263,12 @@ document.getElementById('product-select').addEventListener('change', function ()
             }
         });
     }
-
+    
     // Automatically set the "something" select to "choose" when not selecting "all"
     if (selectedValue === 'all') {
-        document.getElementById('somthing').value = 'choose';
+        document.getElementById('somthing');
     } else {
-        document.getElementById('somthing').value = 'choose';
+        document.getElementById('somthing');
     }
 
     // Close the product-select dropdown
